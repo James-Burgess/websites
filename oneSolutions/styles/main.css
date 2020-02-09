@@ -1,0 +1,658 @@
+@import url('https://fonts.googleapis.com/css?family=Francois+One|Overpass|Raleway');
+@font-face
+{
+    font-family: slab;
+
+    src: url('/assets/fonts/FlagshipSlab-Regular.otf');
+}
+@font-face
+{
+    font-family: sixcaps;
+
+    scr: url('../assets/fonts/SixCaps.ttf');
+}
+@font-face
+{
+    font-family: ssLight;
+
+    scr: url('../assets/fonts/SourceSansPro-Light.otf');
+}
+@font-face
+{
+    font-family: arch;
+
+    src: url('../assets/fonts/ArchivoNarrow-Regular.otf');
+}
+:root
+{
+    --brown: #211413;
+    --orange: #f26522;
+}
+/* begin modal **************************************************/
+/* Quote Modal **************************************************/
+
+.quoteModal
+{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: none;
+        flex-direction: column;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(0,0,0,.95);
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.escaper
+{
+    position: absolute;
+    z-index: 1500;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(255,255,255,0);
+}
+#quoteForm
+{
+    z-index: 2000;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: column;
+
+    width: 80vw;
+    height: 80vh;
+
+    background: var(--orange);
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.quoteModal .escape
+{
+    font-size: 3em;
+
+    position: absolute;
+    top: 9.5vh;
+    right: 10vw;
+
+    color: white;
+}
+.quoteModal .escape:hover
+{
+    cursor: hand;
+}
+
+#quoteForm h3
+{
+    font-family: sixcaps, sans-serif; /** need font from ulli **/
+    font-size: 4em;
+
+    padding-top: .25em;
+}
+#quoteform p
+{
+    padding-top: 1em;
+}
+
+/****************************  begin Splash  *************************************/
+.splash
+{
+    position: relative;
+    z-index: 10;
+
+    overflow: hidden;
+
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+.top
+{
+    position: relative;
+    z-index: -25;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: #211413 url('../assets/images/One Solution Homepage image edit.jpg') no-repeat left bottom fixed;
+    background-size: cover;
+}
+.bottom
+{
+    position: absolute;
+    z-index: -25;
+    bottom: -350;
+
+    display: block;
+
+    width: 200%;
+    height: 40vh;
+    margin-left: -75px;
+
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+
+    background: white;
+}
+
+
+/**************************************  End Background ***********************/
+
+
+#quote
+{
+    font-family: sixcaps, sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+
+    position: fixed;
+    z-index: 100;
+    top: 100px;
+    right: 75px;
+
+    padding: 10px 10px;
+
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+    letter-spacing: .1em;
+
+    color: var(--orange);
+    border: 2px solid var(--orange);
+    background: none;
+}
+#quote:hover
+{
+    cursor: hand;
+    -webkit-transition-duration: .5s;
+            transition-duration: .5s;
+
+    color: white;
+    background: var(--orange);
+}
+#qoute:focus
+{
+    outline: none;
+}
+
+.contentBlock
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    overflow: hidden;
+
+    width: 100%;
+    height: 80%;
+
+    color: white;
+
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.contentLeft
+{
+    float: left;
+
+    width: 50vw;
+    margin-top: 80px;
+    margin-left: 170px;
+}
+.contentLeft #logo
+{
+    max-width: 21em;
+    max-height: 21em;
+}
+
+.contentBlock .contentLeft h1
+{
+    font-family: sixcaps, sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+
+    margin-top: 50px;
+
+    text-transform: uppercase;
+
+    color: var(--orange);
+}
+.contentLeft h3
+{
+    font-family: arch, sans-serif;
+    font-size: 1.4em;
+
+    margin-left: 7px;
+    padding-top: 4px;
+
+    text-transform: uppercase;
+}
+
+
+.contentLeft p
+{
+    font-family: slab, sans-serif;
+
+    width: 80%;
+    margin-top: 25px;
+}
+/**************************  End Splash Styles  ******************************************/
+/* start slideshow styles  **************************************************/
+
+.contentRight
+{
+    position: absolute;
+    z-index: 30;
+    right: 5vw;
+    bottom: 5vh;
+
+    overflow: hidden;
+
+    width: 45vw;
+    height: 50vh;
+
+    border-radius: 3px;
+    box-shadow: 1px 5px 10px 3px rgba(0,0,0,.2);
+}
+
+#slideshow
+{
+    position: relative;
+
+    max-width: 45vw;
+    height: 100%;
+}
+
+#slideshow img
+{
+    position: absolute;
+    z-index: 38;
+    right: 0;
+    bottom: 0;
+
+    display: none;
+
+    width: 100%;
+
+    -webkit-transition-duration: 2s;
+            transition-duration: 2s;
+
+    -webkit-filter: blur(.5px);
+            filter: blur(.5px);
+}
+
+#slideshow img.active
+{
+    z-index: 40;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+#slideshow img.last-active
+{
+    z-index: 39;
+}
+
+
+/* start logo styles **************************************************/
+
+#logoBlock
+{
+    position: absolute;
+    z-index: 200;
+    bottom: 50 ;
+    left: 150;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row;
+
+    width: 388px;
+    height: 128px;
+
+    -webkit-transition-duration: 5ms;
+            transition-duration: 5ms;
+
+    border-bottom: 8px solid var(--orange);
+    background: var(--brown) ;
+    box-shadow: 5px 20px 50px 5px rgba(0, 0, 0, .2);
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+
+#logoBlock .icon1,
+.icon2,
+.icon3,
+.icon4
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    width: 25%;
+
+    -webkit-transition-duration: .5s;
+            transition-duration: .5s;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-flex-line-pack: center;
+    align-items: center;
+}
+#logoblock .img
+{
+    z-index: 22;
+
+    width: 75px;
+    height: 75px;
+
+    -webkit-transition-duration: 2s;
+            transition-duration: 2s;
+
+    background-size: contain;
+}
+
+#logoBlock .icon1
+{
+    height: 167px;
+
+    -webkit-transform: translateY(-19.5px);
+            transform: translateY(-19.5px);
+
+    background: var(--orange) ;
+    box-shadow: 5px 20px 50px 5px rgba(0, 0, 0, .05);
+}
+
+
+.icon1 .img
+{
+    background: rgba(255, 255, 255, 0) url('../assets/images/joinery-icon-brown.png') no-repeat center;
+}
+.icon2 .img
+{
+    background: rgba(255, 255, 255, 0) url('../assets/images/deck icon orange.png') no-repeat center;
+}
+.icon3 .img
+{
+    background: rgba(255, 255, 255, 0) url('../assets/images/tree-felling-icon-orange.png') no-repeat center;
+}
+.icon4 .img
+{
+    background: rgba(255, 255, 255, 0) url('../assets/images/phone-icon-orange.png') no-repeat center;
+}
+
+/****************************************************  End Logo *************************************************/
+
+main
+{
+    z-index: -20;
+    top: 90vh;
+    left: 150;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+        flex-direction: column;
+
+    width: 100vw;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+}
+
+main .text
+{
+    left: 150;
+
+    width: 40vw;
+    height: 740px;
+    margin-top: 20vh;
+    padding: 10px;
+
+    -webkit-transition-duration: 3s;
+            transition-duration: 3s;
+}
+/* fonts **************************************************/
+main div h3
+{
+    font-family: sixcaps, sans-serif;
+    font-size: 4em;
+
+    margin-left: -5px;
+
+    text-transform: uppercase;
+
+    color: var(--brown);
+}
+main div h4
+{
+    font-family: ssLight, sans-serif;
+    font-size: 1.3em;
+
+    text-transform: uppercase;
+
+    color: var(--brown);
+}
+
+main div p
+{
+    font-family: arch , sans-serif;
+    font-size: 1em;
+    line-height: 1.2em;
+
+    width: 80%;
+    padding-top: 40px;
+
+    color: var(--brown);
+}
+
+/* styles for call page **************************************************/
+.call p
+{
+    font-size: 2em;
+
+    padding-top: 20px;
+}
+.call input
+{
+    font-family: sixcaps, sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 10px 10px;
+
+    text-align: center;
+    letter-spacing: .1em;
+
+    color: var(--orange);
+    border: 2px solid var(--orange);
+    background: none;
+}
+.call input:focus
+{
+    border: none;
+    border-bottom: 2px solid var(--orange);
+    outline: none;
+}
+/* do not group these rules */
+*::-webkit-input-placeholder
+{
+    font-family: sixcaps, sans-serif;
+
+    color: var(--orange);
+}
+*:-moz-placeholder
+{
+    font-family: sixcaps, sans-serif;
+    /* FF 4-18 */
+
+    color: var(--orange);
+}
+*::-moz-placeholder
+{
+    font-family: sixcaps, sans-serif;
+    /* FF 19+ */
+
+    color: var(--orange);
+}
+*:-ms-input-placeholder
+{
+    font-family: sixcaps, sans-serif;
+    /* IE 10+ */
+
+    color: var(--orange);
+}
+.call #footQuote
+{
+    font-family: sixcaps, sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+
+    position: relative;
+    top: 30;
+    left: 20;
+
+    padding: 10px 10px;
+
+    letter-spacing: .1em;
+
+    color: var(--orange);
+    border: 2px solid var(--orange);
+    background: none;
+}
+.call #footQuote:hover
+{
+    cursor: hand;
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+
+    color: white;
+    background: var(--orange);
+}
+/* default styles **************************************************/
+main .indoor
+{
+    position: absolute;
+    z-index: -30;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+main .outdoor,
+.tree,
+.call
+{
+    position: fixed;
+    top: 100;
+
+    display: none;
+}
+
+
+/*************Image Styling******************/
+main .image
+{
+    position: fixed;
+    z-index: -20;
+    top: 30vh;
+    left: 55vw;
+
+    display: none;
+    overflow-x: hidden;
+
+    width: 40vw;
+    max-height: 60vh;
+
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+}
+
+
+
+/* footer **************************************************/
+
+footer
+{
+    z-index: -10;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    height: 50px;
+    margin-top: 400vh;
+
+    border-top: 10px solid var(--orange);
+    background: var(--brown);
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+footer p
+{
+    color: white;
+}

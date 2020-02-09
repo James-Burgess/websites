@@ -1,0 +1,197 @@
+/*Widescreen*/
+
+@media(min-width: 2250px)
+{
+    .bottom
+    {
+        bottom: -450;
+    }
+}
+
+/*smallscreen*/
+@media(max-width: 1120px)
+{
+    #quote
+    {
+        display: none;
+    }
+    .contentRight
+    {
+        display: none;
+    }
+    main .image
+    {
+        top: 60vh;
+        left: 10vw;
+
+        width: 80vw;
+        max-height: 38vh;
+    }
+    main
+    {
+        left: 5vw;
+    }
+    main .text
+    {
+        left: 13vw;
+
+        width: 80vw;
+        margin-top: 100px;
+    }
+
+    main div h3
+    {
+        font-size: 2em;
+
+        padding-left: 5px;
+    }
+    main div p
+    {
+        font-size: 1em;
+
+        width: 60%;
+    }
+    .call p
+    {
+        font-size: 1.5em;
+
+        width: 100%;
+    }
+    .callImages
+    {
+        display: none !important;
+    }
+    .call input
+    {
+        width: 85%;
+        margin-left: 0;
+    }
+    .call #footQuote
+    {
+        left: 0;
+
+        width: 85%;
+    }
+}
+
+@media(max-width: 1380px)
+{
+    .bottom
+    {
+        bottom: -300;
+    }
+}
+@media(max-height:820px)
+{
+    .bottom
+    {
+        bottom: -250;
+    }
+
+    .contentLeft
+    {
+        margin-top: 50px;
+    }
+    #logo
+    {
+        max-width: 15em;
+        max-height: 15em;
+    }
+    .contentBlock .contentLeft h1
+    {
+        margin-top: 25px;
+    }
+    #logoblock
+    {
+        bottom: 25;
+    }
+}
+
+/*IPAd horizontal*/
+
+@media(max-width: 1024px)
+{
+    .bottom
+    {
+        bottom: -250;
+    }
+}
+@media(max-height:700px)
+{
+    #logo
+    {
+        max-width: 5em;
+        max-height: 5em;
+    }
+}
+
+/*mobile*/
+
+@media(max-width: 420px)
+{
+    .bottom
+    {
+        bottom: -100;
+    }
+
+
+    .contentBlock
+    {
+        max-width: 100%;
+    }
+    .contentLeft
+    {
+        width: 100vw;
+        margin-top: 40;
+        margin-left: 0;
+
+        text-align: center;
+    }
+    .contentLeft #logo
+    {
+        max-width: 12em;
+        max-height: 12em;
+    }
+
+
+    .contentBlock .contentLeft h1
+    {
+        font-size: 2em;
+
+        margin-top: 25px;
+    }
+    .contentLeft h3
+    {
+        font-size: 1em;
+
+        margin-left: 10px;
+    }
+    .contentLeft h5
+    {
+        font-size: .9em;
+
+        display: none;
+
+        margin-left: 0;
+        padding-top: 10px;
+    }
+    #logoBlock
+    {
+        left: 5vw;
+
+        width: 90vw;
+    }
+    #logoBlock .img
+    {
+        max-width: 50px;
+        max-height: 50px;
+
+        background-size: 50px 50px;
+    }
+    main div p
+    {
+        font-size: .75em;
+
+        width: 80%;
+    }
+}
