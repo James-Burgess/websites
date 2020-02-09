@@ -1,0 +1,371 @@
+/*css rester*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/*font imports*/
+
+@font-face{
+  font-family: "loopy-reg";
+  src:url('../static/fonts/nowalt-regular-webfont.woff') format('woff'),
+      url('../static/fonts/nowalt-regular-webfont.woff2') format('woff2');
+	font-weight: normal;
+    font-style: normal;
+
+}
+@font-face{
+  font-family: "loopy-bold";
+  src:url('../static/fonts/nowalt-bold-webfont.woff') format('woff'),
+      url('../static/fonts/nowalt-bold-webfont.woff2') format('woff2');
+	font-weight: bold;
+    font-style: normal;
+}
+body{
+	overflow-x: hidden;
+	overflow-y: auto; 
+}
+/*navigation bar*/
+@keyframes bounceInRight {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    transform: translate3d(0,3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0,-25px, 0);
+  }
+
+  75% {
+    transform: translate3d(0,10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0,-5px, 0);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+
+nav{
+	height:  80px;
+	width:  100vh;
+
+	transform:  translate(0, 100%) rotate(-90deg);
+	transform-origin: 0 0;
+	position: fixed;
+	bottom: 0;
+	left: calc(100vw - 80px);
+	z-index: 120;
+
+}
+nav ul{
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	  	color: white;
+}
+nav ul li {
+	text-decoration: none;
+	font-size: 1.25em;
+  	font-family: loopy-bold;
+}
+nav ul span{
+	padding-top: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 10px;
+
+	transition-duration: 2s;
+	 animation-name: fadeIn;	
+	  animation-duration: 3s;
+  animation-fill-mode: both;
+  cursor: pointer;
+}
+nav ul li a{
+	text-decoration: none;
+	color: black;
+}
+
+.active{
+background: url('../static/Loophole-web-text-category-line.png') no-repeat center;	
+}
+.active_white{
+background: url('../static/Loophole-web-text-category-line-white.png') no-repeat center;	
+}
+.active_grey{
+background: url('../static/Loophole-web-text-category-line-Grey.png') no-repeat center;	
+}
+
+
+/*hello page*/
+
+#hello{
+	height:100vh;
+	width: 100vw;
+	background: black url("../static/Loophole-Homepage-pattern-02.png") repeat center;
+	background-size: contain;
+	color: white;
+	z-index: -10;
+	position: fixed;
+}
+
+#scroller{
+	font-family: loopy-reg;
+	color:grey;
+	position: absolute;
+	bottom: 35px;
+	left: 90vw;
+	transform: translate(-50%);
+
+
+}
+
+#hello h3{
+	font-family: loopy-reg;
+	width: 25vw;
+	position: absolute;
+	left: 45vw;
+	bottom: 20vh;
+	font-size: 1.25em;
+	line-height: 1.251em;
+	transform: translate(-50%);
+}
+#hello h3 b{
+	font-family: loopy-bold;
+}
+
+#particles-js{
+	position: fixed;
+	z-index: 10;
+	height: 100vh;
+	width: 100vw;
+	opacity: 0;
+	transition-duration:5s;
+}
+.fallback{
+	background: url('../static/Loophole-Page-2-pattern-01.png') no-repeat center;
+	background-size: cover;
+	z-index: 8;
+
+}
+
+/*common viewport styling*/
+
+.viewport{
+	width: 100vw;
+
+}
+.number{
+	max-height: 50px;
+	max-width: 50px;
+	border-radius: 50%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	
+	
+	position: absolute;
+	top: 80px;
+	left: 40px;
+}
+.viewport h1{
+	/*border-bottom: 8px solid yellow;*/
+
+	font-size: 2em;
+	font-family: loopy-bold;
+	
+}
+.headwrap{
+	width: 15em;
+	position: absolute;
+	top: 180px;
+	left:80px;
+	
+	height: 80px;
+	background-image: url('../static/Loophole-web-text-heading-Line-1.png');
+/*	background-size: cover;*/
+	background-position: right top;
+	background-repeat: no-repeat;
+
+
+	text-align: center;
+}
+.viewport p{
+	font-family: loopy-reg;
+	width:40em;
+	position: absolute;
+	top: 400px;
+	left: 150px;
+}
+
+/*who page*/
+#who{
+	position: relative;
+	top:100vh;
+	height: 100vh;
+	background: white;
+	z-index: 9;
+}
+
+/*what page*/
+#what{
+	position: absolute;
+	top:200vh;
+	height: 100vh;
+	background: white;
+	z-index:9;
+}
+
+/*work page*/
+#work{
+	position: absolute;
+	top:300vh;
+	height: 150vh;
+	background: white;
+	z-index: 10;
+}
+#work .headwrap{
+	background-image: url('../static/Loophole-web-text-heading--squiggle-Line-2.png')
+}
+#work h1{
+	font-size: 3em;
+}
+.placeholder{
+	position: absolute;
+	top: 90vh;
+	left: 50vw;
+	transform: translate(-50%, -50%);
+}
+/*contact page*/
+#contact{
+	position: absolute;
+	top:450vh;
+	height: 100vh;
+	background: #FFFF00;
+	z-index: 111;
+}
+#contact .number{
+	background: yellow;
+}
+#contact h1{
+/*	border-bottom: 8px solid white;*/
+	background: url('../static/Loophole-web-text-heading-Line--white.png') no-repeat bottom;
+	background-size: cover;
+	padding-bottom: 15px;
+}
+
+#contact h2 a{
+	width: 80vw;
+	text-decoration: none;
+	font-size: 8vw;
+	transform: translate(-50%,-50%);
+	position: absolute;
+	top: 50vh;
+	left:47vw;
+	font-family: loopy-reg;
+	color: black;
+	font-weight: 1;
+	padding: 15px 20px;
+	background: url('../static/Loophole-web-text-email-line.png') no-repeat bottom;
+	background-size: contain;
+}
+
+.social{
+	position: absolute;
+	top: 55vh;
+	left: 27vw;
+	width: 40vw;
+	height: 45vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.social a{
+	background: white;
+	padding: 0px;
+	border-radius: 50%;
+}
+.social a img{
+	max-width: 80px;
+	max-height: auto;
+	background: yellow;
+}
+@keyframes wobble {
+  from {
+    transform: none;
+  }
+
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animated{
+	animation-duration: 2s;
+	animation-fill-mode: both;
+}
+
+.wobble{
+	animation-name: wobble;
+}
+#nav{
+	animation-name: bounceInRight;
+}
