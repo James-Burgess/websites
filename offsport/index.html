@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            /*background-image: url("https://drive.google.com/uc?export=view&id=0B3ubyt3iIvkaSjRtQThYR1ZTRGs")*/
+            background: grey;
+        }
+        .hideOperations {
+            display: none;
+        }
+
+        .displayOperations {
+            display: block;
+        }
+
+        .editor-area {
+            overflow: hidden;
+            float: left;
+            margin-top: 20vh;
+            margin-left: 10vw;
+        }
+
+        .controls {
+            width: 100px;
+            overflow: hidden;
+            float: right;
+            position: relative;
+        }
+
+        .canvas-bg-wrapper {
+            position: relative;
+            width: 600px;
+            height: 560px;
+        }
+
+        .canvas-bg {
+            position: absolute;
+        }
+
+        .canvas-container {
+            top: 75px;
+            left: 155px;
+            /*border-style: solid;*/
+            /*border-width: 19px 22px 22px 19px;*/
+            /*-moz-border-image: url(https://drive.google.com/uc?export=view&id=0B3ubyt3iIvkabEZhbkJseW5IZWc) 19 22 21 19 round;*/
+            /*-webkit-border-image: url(https://drive.google.com/uc?export=view&id=0B3ubyt3iIvkabEZhbkJseW5IZWc) 19 22 21 19 round;*/
+            /*-o-border-image: url(https://drive.google.com/uc?export=view&id=0B3ubyt3iIvkabEZhbkJseW5IZWc) 19 22 21 19 round;*/
+            /*border-image: url(https://drive.google.com/uc?export=view&id=0B3ubyt3iIvkabEZhbkJseW5IZWc) 19 22 21 19 round;*/
+        }
+
+        #c {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+<div id="canvas-wrapper" class="editor-area">
+    <div class="canvas-bg-wrapper">
+        <img class="canvas-bg" alt="" src="https://drive.google.com/uc?export=view&id=0B3ubyt3iIvkaUlpHVEpDTGhjQzg">
+        <canvas width="260" height="360" id="c"></canvas>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.3.1/fabric.min.js" integrity="sha512-ACqMrfAtm537AWzgx/xQ57JnFxXeq8RylQMGg4y/e6M2ew4Z8NycE8aId/Bt2ZE+w1gNsox3MgwxKl7SGMRdtA==" crossorigin="anonymous"></script>
+<script>
+    var canvas = new fabric.Canvas('c');
+
+    fabric.Image.fromURL('http://127.0.0.1:8080/logo_small.png', function(myImg) {
+        //i create an extra var for to change some image properties
+        var img1 = myImg.set({ left: 200, top: 50 });
+        img1.scaleToHeight(60);
+        img1.scaleToWidth(60);
+        canvas.add(img1);
+    });
+
+</script>
+
+</body>
+</html>
