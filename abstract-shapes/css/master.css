@@ -1,0 +1,100 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.bg-image {
+  background-image: url('/images/bg.webp');
+  background-size: cover;
+
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+
+}
+
+.svg {
+  position: absolute;
+  top: 0vh;
+  left: 1vw;
+  /* transform: translateX(50%); */
+  z-index: 2;
+  background-image: url('/images/text.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 98vw;
+  /* min-height: 20vh; */
+  height: 90vh;
+
+  animation-name: heartBeat;
+  animation-duration: 1.3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.links {
+  position: absolute;
+  bottom: 5vh;
+  left: 50vw;
+  transform: translateX(-50%);
+  width: 40vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+}
+
+.icon-link {
+  height: 3.5em;
+  width: 3.5em;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.icon-link:hover{
+  filter: grayscale(10%);
+  transition-duration: 1s;
+  transform: scale(1.2)
+}
+
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+    transform: translate(1px, 1px);
+  }
+
+  14% {
+    transform: scale(1.01);
+    transform: translate(-1px, -1px);
+
+  }
+
+  28% {
+    transform: scale(1);
+    transform: translate(1px, 1px);
+
+  }
+
+  42% {
+    transform: scale(1.01);
+    transform: translate(-1px, -1px);
+  }
+
+  90% {
+    transform: scale(1);
+    transform: translate(1px, 1px);
+
+  }
+  100% {
+    transform: translate(-1px, -1px);
+
+  }
+}
