@@ -2,82 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Off sport - TCFY</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <style>
-        body {
-            /*background-image: url("https://drive.google.com/uc?export=view&id=0B3ubyt3iIvkaSjRtQThYR1ZTRGs")*/
-            background: grey;
-        }
-        .hideOperations {
-            display: none;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
-        .displayOperations {
-            display: block;
-        }
+       body {
+           height: 100vh;
+           width: 100vw;
+           margin: 0;
+           position: absolute;
+           top: 0;
+           left: 0;
 
-        .editor-area {
-            overflow: hidden;
-            float: left;
-            margin-top: 20vh;
-            margin-left: 10vw;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+       }
+        h1, p, small {
+            font-family: 'Roboto Slab', serif;
+            text-align: center;
         }
-
-        .controls {
-            width: 100px;
-            overflow: hidden;
-            float: right;
-            position: relative;
-        }
-
-        .canvas-bg-wrapper {
-            position: relative;
-            width: 600px;
-            height: 560px;
-        }
-
-        .canvas-bg {
-            position: absolute;
-        }
-
-        .canvas-container {
-            top: 75px;
-            left: 155px;
-            /*border-style: solid;*/
-            /*border-width: 19px 22px 22px 19px;*/
-            /*-moz-border-image: url(https://drive.google.com/uc?export=view&id=0B3ubyt3iIvkabEZhbkJseW5IZWc) 19 22 21 19 round;*/
-            /*-webkit-border-image: url(https://drive.google.com/uc?export=view&id=0B3ubyt3iIvkabEZhbkJseW5IZWc) 19 22 21 19 round;*/
-            /*-o-border-image: url(https://drive.google.com/uc?export=view&id=0B3ubyt3iIvkabEZhbkJseW5IZWc) 19 22 21 19 round;*/
-            /*border-image: url(https://drive.google.com/uc?export=view&id=0B3ubyt3iIvkabEZhbkJseW5IZWc) 19 22 21 19 round;*/
-        }
-
-        #c {
-            position: relative;
+        small {
+            color: rgba(255, 0, 0, 0.4);
         }
     </style>
 </head>
 <body>
+<img src="logo_small.png" alt="off sport">
+<h1>Uh oh!</h1>
+<small>[ERR]: not cool enough</small>
 
-<div id="canvas-wrapper" class="editor-area">
-    <div class="canvas-bg-wrapper">
-        <img class="canvas-bg" alt="" src="https://drive.google.com/uc?export=view&id=0B3ubyt3iIvkaUlpHVEpDTGhjQzg">
-        <canvas width="260" height="360" id="c"></canvas>
-    </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.3.1/fabric.min.js" integrity="sha512-ACqMrfAtm537AWzgx/xQ57JnFxXeq8RylQMGg4y/e6M2ew4Z8NycE8aId/Bt2ZE+w1gNsox3MgwxKl7SGMRdtA==" crossorigin="anonymous"></script>
+<p>You have <span id="count">0</span> internet points but need at least 69 to get in...</p>
 <script>
-    var canvas = new fabric.Canvas('c');
-
-    fabric.Image.fromURL('https://offsport.store/logo_small.png', function(myImg) {
-        //i create an extra var for to change some image properties
-        var img1 = myImg.set({ left: 200, top: 50 });
-        img1.scaleToHeight(60);
-        img1.scaleToWidth(60);
-        canvas.add(img1);
-    });
-
+    document.getElementById('count').innerText = Math.floor(Math.random() * 68)
 </script>
-
 </body>
 </html>
