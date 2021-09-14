@@ -52,37 +52,49 @@
             }
 
         }
+
+        .loading {
+            background: transparent url('images/loading.gif') center no-repeat;
+        }
     </style>
 
 </head>
 <body>
-<h1>Ulliboy</h1>
+<img height=100px src="images/ulliboy.gif" alt="">
+
 <div class="image-container" id="image-container">
+    <div class="loading"></div>
 </div>
 
 <script>
-    const images = [
-      'Pwebcam.png',
-      'AS-02BW.gif',
-      'FC-GIF.gif',
-      'JL-GIF.gif',
-      'OSgif01.gif',
-      'P-AS-cov.png',
-      'P-CI-01.png',
-      'P-CTL.png',
-      'CI-logo1.gif',
-      'peacepuffGIF.gif',
-      'P-GC-logo.png',
-      'Port-head.gif',
-      'Pwcan.png',
-      'CI-logogif92.gif',
-      'shaksgif.gif',
-      'WC-gif-2.gif',
-    ]
-    const container = document.querySelector('#image-container')
+
+  const images = [
+    'Pwebcam.png',
+    'AS-02BW.gif',
+    'FC-GIF.gif',
+    'JL-GIF.gif',
+    'OSgif01.gif',
+    'P-AS-cov.png',
+    'P-CI-01.png',
+    'P-CTL.png',
+    'CI-logo1.gif',
+    'peacepuffGIF.gif',
+    'P-GC-logo.png',
+    'Port-head.gif',
+    'Pwcan.png',
+    'CI-logogif92.gif',
+    'shaksgif.gif',
+    'WC-gif-2.gif',
+  ]
+  const container = document.querySelector('#image-container')
+
+  document.addEventListener('DOMContentLoaded', function() {
+    container.innerHTML = ''
     for (let image of images) {
-      container.innerHTML += `<div class="box"><img height="100%" width="auto" src="images/${image}" alt="${image}"></div>`
+      container.innerHTML += `<div class="box loading"><img  height="100%" width="auto" src="images/${image}" alt="${image}"></div>`
     }
+  }, false);
+
 </script>
 </body>
 </html>
