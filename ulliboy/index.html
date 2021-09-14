@@ -1,0 +1,88 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ulliboy</title>
+    <style>
+        body {
+            /*margin: 40px;*/
+            width: 100vw;
+            overflow-x: hidden;
+            background: #fcfcfc;
+        }
+
+        .box {
+            border-radius: 5px;
+            font-size: 150%;
+            transition-duration: 1s;
+            height: 15vw;
+            width: 15vw;
+        }
+
+        
+        .box:hover {
+            transform: scale(1.5);
+            box-shadow: 5px 5px 10px 0 rgba(200,200,200,.3);
+            z-index: 20;
+        }
+
+        .image-container {
+            /*margin-left: 10vw;*/
+            width: 100vw;
+            /*height: 90vh;*/
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(4, 16vw);
+            align-content: center;
+            justify-content: center;
+            /*grid-template-rows: auto;*/
+            grid-auto-flow: row;
+        }
+        
+        @media all and (max-width: 900px) {
+            .image-container {
+                grid-template-columns: repeat(2, 25vw);
+            }
+
+            .box {
+                height: 25vw;
+                width: 25vw;
+            }
+
+        }
+    </style>
+
+</head>
+<body>
+<h1>Ulliboy</h1>
+<div class="image-container" id="image-container">
+</div>
+
+<script>
+    const images = [
+      'Pwebcam.png',
+      'AS-02BW.gif',
+      'FC-GIF.gif',
+      'JL-GIF.gif',
+      'OSgif01.gif',
+      'P-AS-cov.png',
+      'P-CI-01.png',
+      'P-CTL.png',
+      'CI-logo1.gif',
+      'peacepuffGIF.gif',
+      'P-GC-logo.png',
+      'Port-head.gif',
+      'Pwcan.png',
+      'CI-logogif92.gif',
+      'shaksgif.gif',
+      'WC-gif-2.gif',
+    ]
+    const container = document.querySelector('#image-container')
+    for (let image of images) {
+      container.innerHTML += `<div class="box"><img height="100%" width="auto" src="images/${image}" alt="${image}"></div>`
+    }
+</script>
+</body>
+</html>
